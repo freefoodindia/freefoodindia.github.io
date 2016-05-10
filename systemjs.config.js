@@ -1,14 +1,15 @@
+
 (function(global) {
 
-  // map tells the System loader where to look for things
+  /// map tells the System loader where to look for things
   var map = {
-    'app':                        'app', // 'dist',
+    'app':                        'app', /// 'dist',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular'
   };
 
-  // packages tells the System loader how to load when no filename and/or no extension
+  /// packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
@@ -28,7 +29,7 @@
     '@angular/upgrade',
   ];
 
-  // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
+  /// add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
   packageNames.forEach(function(pkgName) {
     packages[pkgName] = { main: 'index.js', defaultExtension: 'js' };
   });
@@ -38,9 +39,11 @@
     packages: packages
   }
 
-  // filterSystemConfig - index.html's chance to modify config before we register it.
+  /// filterSystemConfig - index.html's chance to modify config before we register it.
   if (global.filterSystemConfig) { global.filterSystemConfig(config); }
 
   System.config(config);
 
 })(this);
+
+
