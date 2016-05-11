@@ -6,10 +6,7 @@
   },
   "scripts": {
     "start": "concurrently \"tsc -w\" \"node ./app.js\" ",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "postinstall": "typings install && tsc" 
   },
   "license": "ISC",
   "dependencies": {
@@ -33,7 +30,6 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
-    "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   }
